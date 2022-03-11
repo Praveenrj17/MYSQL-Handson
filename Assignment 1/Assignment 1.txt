@@ -1,0 +1,22 @@
+create database Details
+use Details
+create table CUSTOMER (Cust_id varchar(5),Fname varchar(15),Lname varchar(15),Area char(2),Phone int,DOB varchar(30),Payment double);
+insert into CUSTOMER values('A01','Ivan','Ross','SA',6125467,'15-01-1996',800.50);
+DROP table CUSTOMER
+insert into CUSTOMER values('A02','Vandana','Ray','MU',5560379,'20-12-1987',1000.75),('A03','Pramada','Jauguste','DA',4560389,'25-06-1986',500.00),('A04','Basu','Navidini','BA',6125401,'30-02-1989',860.00),('A05','Ravi','Shridhar','NA',null,'15-02-1989',500.50);
+insert into CUSTOMER values('A06','Rukmini','Aiyer','GH',5125274,'23-07-1980',1500.50)
+show columns from Details.CUSTOMER
+select*from CUSTOMER
+insert into CUSTOMER (DOB) values (now())
+select DOB from CUSTOMER
+update CUSTOMER set Phone=4566309 where Fname='Vandana'
+update CUSTOMER set Phone=5673321 where Fname='Basu'
+update CUSTOMER set DOB=26-09-1990 where Fname='Pramada'
+update CUSTOMER set DOB=14-08-1982 where Fname='Ravi'
+delete from CUSTOMER where Cust_id='A01'
+delete from CUSTOMER where Cust_id='A03'
+delete from CUSTOMER
+insert into CUSTOMER values('A01','Ram','Gopal','TN',6125468,'15-08-1967',850.50),('A02','Raghu','Raman','KL',6125909,'25-08-1990',1000.30),('A03','Pravin','Raj','AP',9025468,'12-07-1997',950.50),('A05','Sanju','Samson','DD',61567368,'17-06-2000',900.50)
+insert into CUSTOMER values ('A06','David','Billa','MH',78904537,'19-01-1989',700.00)
+update CUSTOMER set Fname='Praveen' where Cust_id='A03'
+delete from CUSTOMER where Fname='Praveen'
